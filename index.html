@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABCEnglish Medium School</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <form action="#"></form>
+    </form>
+    <div class="container">
+      <span class="big-circle">
+      </span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Annual Day Form</h3>
+          <p class="text">
+            Hello! a warm welcome to all , please fill the form to register on annual day program 
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="img/location.png" class="icon" alt="" />
+              <p>Korangad , Thamarassery</p>
+            </div>
+            <div class="information">
+              <img src="img/email.png" class="icon" alt="" />
+              <p>abcschool@gmail.com</p>
+            </div>
+            <div class="information">
+              <img src="img/phone.png" class="icon" alt="" />
+              <p>1234567890</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+          <form name="submit-to-google-sheet">
+          <form action="index.html" autocomplete="off">
+            <h3 class="title">Form</h3>
+            <div class="input-container">
+              <input type="text" name="Full Name" class="input" />
+              <label for="">Full Name</label>
+              <span>Full Name</span>
+            </div>
+            <div class="input-container">
+              <input type="text" name="Class" class="input" />
+              <label for="">Class</label>
+              <span>Class</span>
+            </div>
+            <div class="input-container">
+              <input type="text" name="Catogery" class="input" />
+              <label for="">Catogery</label>
+              <span>Catogery</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="Item and Co-ordinating Teacher's Name" class="input"></textarea>
+              <label for="">Item and Co-ordinating Teacher's Name </label>
+              <span>Item and Co-ordinating Teacher's Name</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+          </form>
+          <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzPO33EgwT2rM71CXnKuA-GULdn19nxPUGPyZ9K96HReMWabFHG769O4sSSjRO-7rkb/exec'
+            const form = document.forms['submit-to-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
